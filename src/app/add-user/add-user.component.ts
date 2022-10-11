@@ -50,18 +50,26 @@ public id:any;
   }
 
   public submit() {
-    let payload:any = {
-      first_name: this.firstName,
-      last_name: this.lastName,
-      profile: this.profile,
-    };
 
-    this.button=='update'? payload.id=this.id:false
+    if(!this.firstName || !this.lastName || !this.profile){
+      alert("Please fill all the fields")
+    }
+    else{
+      let payload:any = {
+        first_name: this.firstName,
+        last_name: this.lastName,
+        profile: this.profile,
+      };
+  
+      this.button=='update'? payload.id=this.id:false
+  
+      this.http
+        .post(`${environment.API}/${this.button=='update'?'update':'insert'}`, payload)
+        .subscribe((result: any) => {
+          this.router.navigateByUrl('users-list');
+        });
+    }
 
-    this.http
-      .post(`${environment.API}/${this.button=='update'?'update':'insert'}`, payload)
-      .subscribe((result: any) => {
-        this.router.navigateByUrl('users-list');
-      });
+   
   }
 }

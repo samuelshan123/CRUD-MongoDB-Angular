@@ -1,0 +1,20 @@
+<nav>
+    <p>Dashboard</p>
+    <button routerLink="/add-user" style="background-color: white;color:black;width: 80px;">Add user</button>
+
+</nav>
+
+<div class="parent-container" *ngFor="let item of UsersList">
+ <div class="container">
+ <img [src]=item.profile alt="" height="50" width="50">
+ <p>{{item.first_name}}</p>
+ <p>{{item.last_name}}</p>
+ 
+ <div>
+    <button style="background: green;" [routerLink]="['/edit-user',item._id]">Edit</button>
+    &nbsp;
+ <button (click)="deleteUser(item._id)" style="background:red ;">Delete</button>
+ </div>
+
+ </div>
+</div>

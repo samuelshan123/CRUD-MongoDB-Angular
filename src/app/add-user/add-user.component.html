@@ -1,0 +1,18 @@
+<nav>
+    <p>Add User</p>
+</nav>
+
+<div class="container">
+    <div class="card">
+
+         <h3>Add User</h3>
+
+        <input  [(ngModel)]="firstName" type="text" placeholder="First name">
+        <input [(ngModel)]="lastName" type="text" placeholder="Last name">
+        <img *ngIf="profile" [src]="profile" alt="" height="50" width="50" style="margin-top:10px ;">
+        <input   accept='image/*' (change)="onSelectFile($event)" type="file">
+        <button style="background: purple;" (click)="submit()">{{button}}</button>
+
+
+    </div>
+</div>

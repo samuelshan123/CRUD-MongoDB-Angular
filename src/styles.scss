@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+margin: 0;
+}
+nav{
+    height: 70px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav >p{
+    color: white;
+    font-size: large;
+}
+
+button{
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    height: 30px;
+    width: 50px;
+    cursor: pointer;
+}

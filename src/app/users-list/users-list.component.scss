@@ -1,0 +1,22 @@
+
+
+.parent-container{
+    margin-top:10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container{
+    height: 60px;
+    width: 80%;
+    background-color: white;
+    color: black;
+    box-shadow: 10px 10px 5px #ccc;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
